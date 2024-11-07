@@ -1,0 +1,105 @@
+SELECT * FROM Customers
+WHERE Country = 'Spain'
+AND CustomerName LIKE 'G%';
+
+
+SELECT * FROM Customers
+WHERE Country = 'Germany'
+AND City = 'Berlin'
+AND PostalCode > 12000
+
+SELECT * FROM Customers
+WHERE Country = 'Spain'
+AND (CustomerName LIKE 'G%' 
+OR CustomerName LIKE 'R%');
+
+SELECT * FROM Customers
+WHERE City = 'Berlin'
+OR City = 'London';
+
+SELECT * FROM Customers
+WHERE City = 'Berlin'
+AND CustomerName LIKE 'G%'
+OR Country = 'Norway';
+
+SELECT * FROM Customers
+WHERE Country = 'Spain' 
+AND (CustomerName LIKE 'G%' OR CustomerName LIKE 'R%');
+
+!< or !> or != NOT LIKE, NOT BETWEEN, NOT IN, <>not equal
+
+SELECT * FROM Customers
+WHERE City NOT IN ('Paris', 'London')
+AND CustomerName NOT LIKE 'A%'
+AND (CustomerID NOT BETWEEN 10 AND 20); 
+
+INSERT INTO Customers (CustomerName, City, Country)
+VALUES ('Cardinal', 'Stavanger', 'Norway');
+
+INSERT INTO Customers ()
+VALUES (),(),()
+
+SELECT * FROM Customers
+WHERE Address IS NULL;
+
+SELECT CustomerName FROM Customers
+WHERE CustomerName IS NOT NULL;
+
+UPDATE Customers
+SET Col1 = Values 1, col2 = values2
+WHERE CustomerID = 1;
+
+INSERT INTO Customers
+VALUES CustomerName
+
+UPDATE Customers
+SET CustomerName = 'ag ag', City = 'Yangon'
+WHERE CustomerID = 1;
+
+UPDATE Customers
+SET LastName = 'ag ag'
+WHERE Country = 'Myanmar';
+
+UPDATE Customers
+SET key = values
+WHERE ;
+
+DELETE FROM Customers
+WHERE CustomerID = 'ag ag';
+
+DELETE FROM Customers; / DROP TABLE Customers;
+
+SELECT personName, finalWroth FROM Billionaries;
+
+SELECT COUNT(DISTINCT country) FROM Billionaries;/ SELECT COUNT(Country) FROM Billionaries;
+
+SELECT COUNT(DISTINCT personName) FROM billionaries;/ SELECT AVG(finalwroth) FROM billionaries;
+
+SELECT * FROM billionaries
+WHERE country IN ('france', 'england', 'germany')
+AND city <> ('paris', 'london', 'berlin');
+
+SELECT industries, COUNT(personname) AS billionaire_count FROM billionaries
+GROUP BY industries
+ORDER BY COUNT(personname) DESC
+LIMIT 10;
+ 
+SELECT brithmonth, COUNT(personname) AS max_month FROM billionaires
+GROUP BY birthmonth
+ORDER BY birthmonth DESC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
