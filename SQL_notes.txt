@@ -41,6 +41,7 @@ VALUES (),(),()
 
 SELECT * FROM Customers
 WHERE Address IS NULL;
+※NULL is blank.
 
 SELECT CustomerName FROM Customers
 WHERE CustomerName IS NOT NULL;
